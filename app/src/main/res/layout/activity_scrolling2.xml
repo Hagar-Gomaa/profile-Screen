@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ScrollingActivity">
+
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutDescription="@xml/activity_scrolling2_xml_constraintlayout5_scene">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="45dp"
+            android:layout_height="36dp"
+            android:layout_margin="@dimen/dimen_8"
+            android:src="@drawable/backspace_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black_60" />
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/text_margin"
+            android:src="@drawable/more_vert_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black_60" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/Image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:overScrollMode="ifContentScrolls"
+            android:scaleType="fitXY"
+            android:src="@drawable/profile"
+            app:layout_constraintStart_toEndOf="@id/back"
+            app:shapeAppearanceOverlay="@style/cornerImage"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   The Chance"
+            android:textSize="20dp"
+            android:layout_marginStart="16dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="157dp" />
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+    <include
+        android:id="@+id/included"
+        layout="@layout/content_scrolling" />
+
+
+</LinearLayout>
+

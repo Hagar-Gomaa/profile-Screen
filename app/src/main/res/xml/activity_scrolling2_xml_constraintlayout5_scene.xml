@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+
+           <KeyAttribute
+               motion:motionTarget="@+id/Image"
+               motion:framePosition="70"
+               android:scaleX="1" />
+       </KeyFrameSet>
+        <OnSwipe motion:dragDirection="dragDown" />
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_width="77dp"
+            android:layout_height="51dp"
+            android:id="@+id/Image"
+
+            motion:layout_constraintStart_toEndOf="@id/back"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintHorizontal_bias="0.112"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleName"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/Image"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_editor_absoluteY="25dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+    />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="207dp"
+            android:id="@+id/titleName"
+
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_editor_absoluteX="16dp"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:layout_height="350dp"
+            motion:layout_editor_absoluteX="0dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:id="@+id/Image" />
+    </ConstraintSet>
+</MotionScene>
