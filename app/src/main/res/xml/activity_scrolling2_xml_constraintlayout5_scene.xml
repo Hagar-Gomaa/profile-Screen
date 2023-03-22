@@ -40,7 +40,19 @@
             motion:layout_constraintStart_toEndOf="@+id/Image"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_editor_absoluteY="25dp" />
-    </ConstraintSet>
+        <Constraint
+            android:layout_width="411dp"
+            android:layout_height="583dp"
+            android:id="@+id/included"
+            motion:layout_constraintTop_toBottomOf="@id/Image"
+         motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_editor_absoluteY="101dp" />
+
+
+
+</ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
     />
@@ -50,14 +62,21 @@
             android:id="@+id/titleName"
 
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_editor_absoluteX="16dp"
-            motion:layout_constraintBottom_toBottomOf="parent" />
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp" />
         <Constraint
-            android:layout_height="350dp"
-            motion:layout_editor_absoluteX="0dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="371dp"
+
             motion:layout_constraintTop_toTopOf="parent"
-            android:layout_width="match_parent"
-            android:id="@+id/Image" />
+            android:layout_width="417dp"
+            android:id="@+id/Image"
+            motion:layout_constraintStart_toStartOf="@+id/Image"
+            motion:layout_constraintBottom_toTopOf="@+id/included"
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintEnd_toEndOf="parent"
+            />
+
     </ConstraintSet>
 </MotionScene>

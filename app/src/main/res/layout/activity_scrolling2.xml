@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
+    android:background="@color/blue"
     tools:context=".ScrollingActivity">
 
 
@@ -51,15 +52,17 @@
             android:layout_height="wrap_content"
             android:text="   The Chance"
             android:textSize="20dp"
-            android:layout_marginStart="16dp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="157dp" />
+
+
     </androidx.constraintlayout.motion.widget.MotionLayout>
-
-
     <include
         android:id="@+id/included"
-        layout="@layout/content_scrolling" />
+        layout="@layout/content_scrolling"
+         />
+
+
 
 
 </LinearLayout>
